@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 import java.awt.Component;
+
+import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JComponent;
@@ -23,6 +25,9 @@ import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.factories.FormFactory;
 import java.awt.BorderLayout;
+import javax.swing.JList;
+import javax.swing.ListSelectionModel;
+import javax.swing.AbstractListModel;
 
 public class KeyManager {
 
@@ -30,6 +35,7 @@ public class KeyManager {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
+	private JTextField textField_3;
 
 	/**
 	 * Launch the application.
@@ -69,9 +75,20 @@ public class KeyManager {
 		tabbedPane.addTab("Versuch1", panelOne);
 		panelOne.setLayout(null);
 		
+
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(165, 28, 256, 20);
 		panelOne.add(comboBox);
+		
+		for(int i = 0; i<3; i++)
+		{
+			textField_3 = new JTextField();
+			textField_3.setBounds(97, 179+20*i, 86, 20);
+			panelOne.add(textField_3);
+		}
+		
+		
+		
 
 		
 		JComponent panelTwo = new JLabel("Ttes");
