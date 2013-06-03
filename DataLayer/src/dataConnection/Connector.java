@@ -1,9 +1,10 @@
 package dataConnection;
 
+
 public class Connector 
 {
 	public void safe()
-	{
+	{ 
 		
 	}
 	
